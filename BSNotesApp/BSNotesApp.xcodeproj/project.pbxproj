@@ -99,9 +99,10 @@
 		66EC43431ECCD1E70059A623 /* BSNotesApp */ = {
 			isa = PBXGroup;
 			children = (
+				66EC43781ECCD2F30059A623 /* Shared */,
+				66EC43751ECCD2EA0059A623 /* Classes */,
 				66EC43441ECCD1E70059A623 /* AppDelegate.swift */,
 				66EC43461ECCD1E70059A623 /* ViewController.swift */,
-				66EC43481ECCD1E70059A623 /* Main.storyboard */,
 				66EC434E1ECCD1E70059A623 /* Assets.xcassets */,
 				66EC43501ECCD1E70059A623 /* LaunchScreen.storyboard */,
 				66EC43531ECCD1E70059A623 /* Info.plist */,
@@ -126,6 +127,53 @@
 				66EC43691ECCD1E70059A623 /* Info.plist */,
 			);
 			path = BSNotesAppUITests;
+			sourceTree = "<group>";
+		};
+		66EC43751ECCD2EA0059A623 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				66EC43761ECCD2EA0059A623 /* Cells */,
+				66EC43771ECCD2EA0059A623 /* ViewControllers */,
+				66EC437A1ECCD3150059A623 /* Storyboards */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		66EC43761ECCD2EA0059A623 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		66EC43771ECCD2EA0059A623 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		66EC43781ECCD2F30059A623 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				66EC43791ECCD2F30059A623 /* Entities */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		66EC43791ECCD2F30059A623 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		66EC437A1ECCD3150059A623 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				66EC43481ECCD1E70059A623 /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +354,7 @@
 				66EC43491ECCD1E70059A623 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		66EC43501ECCD1E70059A623 /* LaunchScreen.storyboard */ = {
@@ -360,7 +409,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -404,7 +453,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
