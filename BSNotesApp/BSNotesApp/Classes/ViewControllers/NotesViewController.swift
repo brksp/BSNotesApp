@@ -55,7 +55,7 @@ extension NotesViewController : UITableViewDataSource{
 //MARK: - UITableViewDelegate
 extension NotesViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 100
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
