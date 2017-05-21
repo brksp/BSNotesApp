@@ -14,6 +14,9 @@
 		66C814AC1ED196E9003F67F3 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 66C8149D1ED19636003F67F3 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		66C814AE1ED196EE003F67F3 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C8149E1ED19636003F67F3 /* RealmSwift.framework */; };
 		66C814AF1ED196EE003F67F3 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 66C8149E1ED19636003F67F3 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		66C814B31ED19C6F003F67F3 /* NoteEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C814B21ED19C6F003F67F3 /* NoteEditViewController.swift */; };
+		66C814B51ED1B896003F67F3 /* NoteTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C814B41ED1B896003F67F3 /* NoteTitleTableViewCell.swift */; };
+		66C814B71ED1B8BC003F67F3 /* EditableNoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C814B61ED1B8BC003F67F3 /* EditableNoteTableViewCell.swift */; };
 		66EC43451ECCD1E70059A623 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC43441ECCD1E70059A623 /* AppDelegate.swift */; };
 		66EC434A1ECCD1E70059A623 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66EC43481ECCD1E70059A623 /* Main.storyboard */; };
 		66EC434D1ECCD1E70059A623 /* BSNotesApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 66EC434B1ECCD1E70059A623 /* BSNotesApp.xcdatamodeld */; };
@@ -63,6 +66,9 @@
 		66C8147F1ED0872C003F67F3 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		66C8149D1ED19636003F67F3 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		66C8149E1ED19636003F67F3 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		66C814B21ED19C6F003F67F3 /* NoteEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteEditViewController.swift; sourceTree = "<group>"; };
+		66C814B41ED1B896003F67F3 /* NoteTitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTitleTableViewCell.swift; sourceTree = "<group>"; };
+		66C814B61ED1B8BC003F67F3 /* EditableNoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditableNoteTableViewCell.swift; sourceTree = "<group>"; };
 		66EC43411ECCD1E70059A623 /* BSNotesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BSNotesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EC43441ECCD1E70059A623 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66EC43491ECCD1E70059A623 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -191,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				66EC437B1ECCD6290059A623 /* NotesViewController.swift */,
+				66C814B21ED19C6F003F67F3 /* NoteEditViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -225,6 +232,8 @@
 			isa = PBXGroup;
 			children = (
 				66EC437E1ECCD6940059A623 /* NotesTableViewCell.swift */,
+				66C814B41ED1B896003F67F3 /* NoteTitleTableViewCell.swift */,
+				66C814B61ED1B8BC003F67F3 /* EditableNoteTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -365,7 +374,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				66C8147C1ED086C7003F67F3 /* Note.swift in Sources */,
+				66C814B71ED1B8BC003F67F3 /* EditableNoteTableViewCell.swift in Sources */,
+				66C814B51ED1B896003F67F3 /* NoteTitleTableViewCell.swift in Sources */,
 				66EC437C1ECCD6290059A623 /* NotesViewController.swift in Sources */,
+				66C814B31ED19C6F003F67F3 /* NoteEditViewController.swift in Sources */,
 				66EC437F1ECCD6940059A623 /* NotesTableViewCell.swift in Sources */,
 				66C814801ED0872C003F67F3 /* CheckBox.swift in Sources */,
 				66EC43451ECCD1E70059A623 /* AppDelegate.swift in Sources */,

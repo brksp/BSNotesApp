@@ -25,6 +25,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="47" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sps-3e-CdP">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NotesTableViewCell" id="Efi-Bg-4hg" customClass="NotesTableViewCell" customModule="BSNotesApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="47"/>
@@ -39,7 +40,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21q-9d-gtG">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21q-9d-gtG">
                                                     <rect key="frame" x="15" y="27.5" width="345" height="14"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
@@ -81,11 +82,94 @@
                     </navigationItem>
                     <connections>
                         <outlet property="notesTableView" destination="Sps-3e-CdP" id="sYQ-g5-r1t"/>
+                        <segue destination="4q5-mh-oQ8" kind="show" identifier="NoteEditViewController" id="dUc-Ju-eXW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1050" y="791"/>
+        </scene>
+        <!--Note Edit View Controller-->
+        <scene sceneID="nqg-9Z-3Ey">
+            <objects>
+                <viewController storyboardIdentifier="NoteEditViewController" id="4q5-mh-oQ8" customClass="NoteEditViewController" customModule="BSNotesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="67h-ln-HUA"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ely-ro-Zbc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZpM-aG-AWO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vrn-Fh-HjX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoteTitleTableViewCell" id="7bG-y1-4PB" customClass="NoteTitleTableViewCell" customModule="BSNotesApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7bG-y1-4PB" id="r4h-q7-xuc">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Qzw-ky-O7t">
+                                                    <rect key="frame" x="15" y="5" width="345" height="33.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Qzw-ky-O7t" secondAttribute="bottom" constant="5" id="7V8-h3-is8"/>
+                                                <constraint firstItem="Qzw-ky-O7t" firstAttribute="top" secondItem="r4h-q7-xuc" secondAttribute="top" constant="5" id="Rqn-DJ-pO6"/>
+                                                <constraint firstItem="Qzw-ky-O7t" firstAttribute="leading" secondItem="r4h-q7-xuc" secondAttribute="leading" constant="15" id="d4y-FV-YX9"/>
+                                                <constraint firstAttribute="trailing" secondItem="Qzw-ky-O7t" secondAttribute="trailing" constant="15" id="zdm-th-w4p"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleTextView" destination="Qzw-ky-O7t" id="lxF-jN-uKu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EditableNoteTableViewCell" id="MPX-Hh-iqS" customClass="EditableNoteTableViewCell" customModule="BSNotesApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MPX-Hh-iqS" id="HCH-Cn-ar2">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gYg-cQ-kfa">
+                                                    <rect key="frame" x="15" y="5" width="345" height="33.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gYg-cQ-kfa" firstAttribute="top" secondItem="HCH-Cn-ar2" secondAttribute="top" constant="5" id="1Sb-OL-D0k"/>
+                                                <constraint firstAttribute="bottom" secondItem="gYg-cQ-kfa" secondAttribute="bottom" constant="5" id="6me-TD-YNx"/>
+                                                <constraint firstAttribute="trailing" secondItem="gYg-cQ-kfa" secondAttribute="trailing" constant="15" id="Ls0-Kb-WRm"/>
+                                                <constraint firstItem="gYg-cQ-kfa" firstAttribute="leading" secondItem="HCH-Cn-ar2" secondAttribute="leading" constant="15" id="cmq-Vh-MVS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Vrn-Fh-HjX" secondAttribute="trailing" id="FEJ-4p-Npd"/>
+                            <constraint firstItem="Vrn-Fh-HjX" firstAttribute="top" secondItem="ZpM-aG-AWO" secondAttribute="topMargin" id="IiV-we-NoF"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Vrn-Fh-HjX" secondAttribute="bottom" id="M17-M1-AYS"/>
+                            <constraint firstItem="Vrn-Fh-HjX" firstAttribute="leading" secondItem="ZpM-aG-AWO" secondAttribute="leading" id="bO7-xH-Ngu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="noteTableView" destination="Vrn-Fh-HjX" id="f5L-Tz-B6G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ssI-2G-NEl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2018" y="790"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dHm-td-N2r">

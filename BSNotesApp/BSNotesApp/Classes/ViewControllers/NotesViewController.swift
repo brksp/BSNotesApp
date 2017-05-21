@@ -25,13 +25,24 @@ class NotesViewController: UIViewController {
         notesTableView.reloadData()
         super.viewDidAppear(animated)
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        removeSelectedStatesOfTableView()
+        super.viewDidDisappear(animated)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    func removeSelectedStatesOfTableView() {
+        if let indexPaths = notesTableView.indexPathsForSelectedRows {
+            for indexPath in indexPaths {
+                notesTableView.deselectRow(at: indexPath, animated: true)
+            }
+        }
+    }
 }
 //MARK: - UITableViewDataSource
 extension NotesViewController : UITableViewDataSource{
@@ -57,7 +68,7 @@ extension NotesViewController : UITableViewDataSource{
 //MARK: - UITableViewDelegate
 extension NotesViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 50
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
