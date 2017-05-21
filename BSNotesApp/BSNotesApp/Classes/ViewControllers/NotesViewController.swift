@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class NotesViewController: UIViewController {
 
@@ -14,6 +15,7 @@ class NotesViewController: UIViewController {
     
     @IBOutlet weak var notesTableView: UITableView!
     
+    var realm: Realm!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -60,5 +62,13 @@ extension NotesViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            try! realm.write {
+//                realm.delete(objectForIndexPath(indexPath: indexPath)!)
+            }
+        }
     }
 }

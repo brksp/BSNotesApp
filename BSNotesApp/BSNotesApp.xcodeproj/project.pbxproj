@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		66489FEE1ECE325C00B6DED0 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66489FEC1ECE325C00B6DED0 /* Realm.framework */; };
-		66489FEF1ECE325C00B6DED0 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66489FED1ECE325C00B6DED0 /* RealmSwift.framework */; };
+		66C8147C1ED086C7003F67F3 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8147B1ED086C7003F67F3 /* Note.swift */; };
+		66C8147E1ED086DA003F67F3 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8147D1ED086DA003F67F3 /* List.swift */; };
+		66C814801ED0872C003F67F3 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8147F1ED0872C003F67F3 /* CheckBox.swift */; };
+		66C8148B1ED19384003F67F3 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C814891ED19384003F67F3 /* Realm.framework */; };
+		66C8148C1ED19384003F67F3 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C814891ED19384003F67F3 /* Realm.framework */; };
+		66C8148D1ED19384003F67F3 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C814891ED19384003F67F3 /* Realm.framework */; };
+		66C8148E1ED19384003F67F3 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C8148A1ED19384003F67F3 /* RealmSwift.framework */; };
+		66C8148F1ED19384003F67F3 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C8148A1ED19384003F67F3 /* RealmSwift.framework */; };
+		66C814901ED19384003F67F3 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C8148A1ED19384003F67F3 /* RealmSwift.framework */; };
 		66EC43451ECCD1E70059A623 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC43441ECCD1E70059A623 /* AppDelegate.swift */; };
-		66EC43471ECCD1E70059A623 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC43461ECCD1E70059A623 /* ViewController.swift */; };
 		66EC434A1ECCD1E70059A623 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66EC43481ECCD1E70059A623 /* Main.storyboard */; };
 		66EC434D1ECCD1E70059A623 /* BSNotesApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 66EC434B1ECCD1E70059A623 /* BSNotesApp.xcdatamodeld */; };
 		66EC434F1ECCD1E70059A623 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66EC434E1ECCD1E70059A623 /* Assets.xcassets */; };
@@ -39,11 +45,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		66489FEC1ECE325C00B6DED0 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
-		66489FED1ECE325C00B6DED0 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		66C8147B1ED086C7003F67F3 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		66C8147D1ED086DA003F67F3 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		66C8147F1ED0872C003F67F3 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		66C814891ED19384003F67F3 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		66C8148A1ED19384003F67F3 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		66EC43411ECCD1E70059A623 /* BSNotesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BSNotesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EC43441ECCD1E70059A623 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		66EC43461ECCD1E70059A623 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		66EC43491ECCD1E70059A623 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		66EC434C1ECCD1E70059A623 /* BSNotesApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BSNotesApp.xcdatamodel; sourceTree = "<group>"; };
 		66EC434E1ECCD1E70059A623 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,8 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66489FEF1ECE325C00B6DED0 /* RealmSwift.framework in Frameworks */,
-				66489FEE1ECE325C00B6DED0 /* Realm.framework in Frameworks */,
+				66C8148E1ED19384003F67F3 /* RealmSwift.framework in Frameworks */,
+				66C8148B1ED19384003F67F3 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66C8148F1ED19384003F67F3 /* RealmSwift.framework in Frameworks */,
+				66C8148C1ED19384003F67F3 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +90,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66C814901ED19384003F67F3 /* RealmSwift.framework in Frameworks */,
+				66C8148D1ED19384003F67F3 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,8 +101,8 @@
 		66489FEB1ECE323700B6DED0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				66489FEC1ECE325C00B6DED0 /* Realm.framework */,
-				66489FED1ECE325C00B6DED0 /* RealmSwift.framework */,
+				66C814891ED19384003F67F3 /* Realm.framework */,
+				66C8148A1ED19384003F67F3 /* RealmSwift.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -121,7 +133,6 @@
 				66EC43781ECCD2F30059A623 /* Shared */,
 				66EC43751ECCD2EA0059A623 /* Classes */,
 				66EC43441ECCD1E70059A623 /* AppDelegate.swift */,
-				66EC43461ECCD1E70059A623 /* ViewController.swift */,
 				66EC434E1ECCD1E70059A623 /* Assets.xcassets */,
 				66EC43501ECCD1E70059A623 /* LaunchScreen.storyboard */,
 				66EC43531ECCD1E70059A623 /* Info.plist */,
@@ -186,6 +197,9 @@
 		66EC43791ECCD2F30059A623 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				66C8147B1ED086C7003F67F3 /* Note.swift */,
+				66C8147D1ED086DA003F67F3 /* List.swift */,
+				66C8147F1ED0872C003F67F3 /* CheckBox.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -340,11 +354,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66C8147C1ED086C7003F67F3 /* Note.swift in Sources */,
 				66EC437C1ECCD6290059A623 /* NotesViewController.swift in Sources */,
-				66EC43471ECCD1E70059A623 /* ViewController.swift in Sources */,
 				66EC437F1ECCD6940059A623 /* NotesTableViewCell.swift in Sources */,
+				66C814801ED0872C003F67F3 /* CheckBox.swift in Sources */,
 				66EC43451ECCD1E70059A623 /* AppDelegate.swift in Sources */,
 				66EC434D1ECCD1E70059A623 /* BSNotesApp.xcdatamodeld in Sources */,
+				66C8147E1ED086DA003F67F3 /* List.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +546,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BSNotesApp/Frameworks",
+				);
 				INFOPLIST_FILE = BSNotesAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.burak.BSNotesAppTests;
@@ -544,6 +564,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BSNotesApp/Frameworks",
+				);
 				INFOPLIST_FILE = BSNotesAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.burak.BSNotesAppTests;
@@ -557,6 +581,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BSNotesApp/Frameworks",
+				);
 				INFOPLIST_FILE = BSNotesAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.burak.BSNotesAppUITests;
@@ -570,6 +598,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BSNotesApp/Frameworks",
+				);
 				INFOPLIST_FILE = BSNotesAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.burak.BSNotesAppUITests;
