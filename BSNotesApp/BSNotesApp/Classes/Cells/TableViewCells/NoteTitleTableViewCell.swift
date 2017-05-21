@@ -10,6 +10,7 @@ import UIKit
 
 @objc protocol NoteTitleTableViewCellDelegate {
     @objc optional func textViewDidChange()
+    @objc optional func textViewDidEndEditing()
 }
 
 
@@ -37,5 +38,16 @@ class NoteTitleTableViewCell: UITableViewCell {
 extension NoteTitleTableViewCell : UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         delegate?.textViewDidChange!()
+    }
+    func textViewDidEndEditing(_ textView: UITextView) {
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            titleTextView.resignFirstResponder()
+            delegate?.textViewDidEndEditing!()
+            return false
+        }
+        return true
     }
 }

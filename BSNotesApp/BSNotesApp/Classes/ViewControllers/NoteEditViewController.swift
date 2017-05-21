@@ -9,6 +9,11 @@
 import UIKit
 
 class NoteEditViewController: UIViewController {
+    
+    enum CellType {
+        case Title
+        case Note
+    }
 
     //MARK: - Properties
     @IBOutlet weak var noteTableView: UITableView!
@@ -25,29 +30,43 @@ class NoteEditViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func updateTableCell() {
+        noteTableView.beginUpdates()
+        noteTableView.endUpdates()
+    }
 
 }
 //MARK: - UITableViewDataSource
 extension NoteEditViewController : UITableViewDataSource{
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == CellType.Title.hashValue {
+            return 1
+        }
         return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NoteTitleTableViewCell", for: indexPath) as! NoteTitleTableViewCell
+        if indexPath.section == CellType.Title.hashValue {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NoteTitleTableViewCell", for: indexPath) as! NoteTitleTableViewCell
             cell.delegate = self
+            return cell
+        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EditableNoteTableViewCell", for: indexPath) as! EditableNoteTableViewCell
+        cell.delegate = self
         return cell
     }
 }
 //MARK: - UITableViewDelegate
 extension NoteEditViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        if indexPath.section == CellType.Title.hashValue {
+            return 30
+        }
+        return 20
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -66,11 +85,19 @@ extension NoteEditViewController : UITableViewDelegate {
 //MARK: - NoteTitleTableViewCellDelegate
 extension NoteEditViewController : NoteTitleTableViewCellDelegate {
     func textViewDidChange() {
-//        let currentOffset = noteTableView.contentOffset
-//        UIView.setAnimationsEnabled(false)
-        noteTableView.beginUpdates()
-        noteTableView.endUpdates()
-//        UIView.setAnimationsEnabled(true)
-//        noteTableView.setContentOffset(currentOffset, animated: false)
+        updateTableCell()
+    }
+    
+    func textViewDidEndEditing() {
+        if let cell = noteTableView.visibleCells.last as? EditableNoteTableViewCell{
+            cell.noteTextView.becomeFirstResponder()
+        }
+    }
+}
+
+//MARK: - EditableNoteTableViewCellDelegate
+extension NoteEditViewController : EditableNoteTableViewCellDelegate {
+    func noteTextViewDidChange() {
+        updateTableCell()
     }
 }

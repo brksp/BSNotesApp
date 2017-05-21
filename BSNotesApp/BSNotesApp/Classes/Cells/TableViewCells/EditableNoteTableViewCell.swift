@@ -8,9 +8,14 @@
 
 import UIKit
 
+@objc protocol EditableNoteTableViewCellDelegate {
+    @objc optional func noteTextViewDidChange()
+}
 
 class EditableNoteTableViewCell: UITableViewCell {
-
+    
+    weak var delegate: EditableNoteTableViewCellDelegate?
+    @IBOutlet weak var noteTextView: UITextView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,7 +26,14 @@ class EditableNoteTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }
 
+extension EditableNoteTableViewCell : UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        delegate?.noteTextViewDidChange!()
+    }
+    func textViewDidEndEditing(_ textView: UITextView) {
+        
+    }
+}
 
