@@ -10,6 +10,10 @@
 		66C8147C1ED086C7003F67F3 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8147B1ED086C7003F67F3 /* Note.swift */; };
 		66C8147E1ED086DA003F67F3 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8147D1ED086DA003F67F3 /* List.swift */; };
 		66C814801ED0872C003F67F3 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8147F1ED0872C003F67F3 /* CheckBox.swift */; };
+		66C814AB1ED196E9003F67F3 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C8149D1ED19636003F67F3 /* Realm.framework */; };
+		66C814AC1ED196E9003F67F3 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 66C8149D1ED19636003F67F3 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		66C814AE1ED196EE003F67F3 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C8149E1ED19636003F67F3 /* RealmSwift.framework */; };
+		66C814AF1ED196EE003F67F3 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 66C8149E1ED19636003F67F3 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		66EC43451ECCD1E70059A623 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC43441ECCD1E70059A623 /* AppDelegate.swift */; };
 		66EC434A1ECCD1E70059A623 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66EC43481ECCD1E70059A623 /* Main.storyboard */; };
 		66EC434D1ECCD1E70059A623 /* BSNotesApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 66EC434B1ECCD1E70059A623 /* BSNotesApp.xcdatamodeld */; };
@@ -38,10 +42,27 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		66C814AD1ED196E9003F67F3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				66C814AF1ED196EE003F67F3 /* RealmSwift.framework in Embed Frameworks */,
+				66C814AC1ED196E9003F67F3 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		66C8147B1ED086C7003F67F3 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		66C8147D1ED086DA003F67F3 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		66C8147F1ED0872C003F67F3 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		66C8149D1ED19636003F67F3 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		66C8149E1ED19636003F67F3 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		66EC43411ECCD1E70059A623 /* BSNotesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BSNotesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EC43441ECCD1E70059A623 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66EC43491ECCD1E70059A623 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,6 +85,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66C814AE1ED196EE003F67F3 /* RealmSwift.framework in Frameworks */,
+				66C814AB1ED196E9003F67F3 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +110,8 @@
 		66489FEB1ECE323700B6DED0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				66C8149D1ED19636003F67F3 /* Realm.framework */,
+				66C8149E1ED19636003F67F3 /* RealmSwift.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -214,6 +239,7 @@
 				66EC433D1ECCD1E70059A623 /* Sources */,
 				66EC433E1ECCD1E70059A623 /* Frameworks */,
 				66EC433F1ECCD1E70059A623 /* Resources */,
+				66C814AD1ED196E9003F67F3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
