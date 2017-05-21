@@ -82,4 +82,8 @@ extension NotesViewController : UITableViewDelegate {
 //            }
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "NoteEditViewController", sender: nil)
+    }
 }

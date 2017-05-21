@@ -8,9 +8,20 @@
 
 import UIKit
 
-class NoteTitleTableViewCell: UITableViewCell {
+@objc protocol NoteTitleTableViewCellDelegate {
+    @objc optional func textViewDidChange()
+}
 
-    @IBOutlet weak var titleTextView: UITextView!
+
+class NoteTitleTableViewCell: UITableViewCell {
+    
+    weak var delegate: NoteTitleTableViewCellDelegate?
+    @IBOutlet weak var titleTextView: UITextView!{
+        didSet{
+            titleTextView.becomeFirstResponder()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,4 +33,9 @@ class NoteTitleTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+}
+extension NoteTitleTableViewCell : UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        delegate?.textViewDidChange!()
+    }
 }

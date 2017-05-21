@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class EditableNoteTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
@@ -22,3 +23,5 @@ class EditableNoteTableViewCell: UITableViewCell {
     }
 
 }
+
+
