@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import RealmSwift
+import Realm
 class NoteEditViewController: UIViewController {
     
     enum CellType {
@@ -18,8 +19,10 @@ class NoteEditViewController: UIViewController {
     //MARK: - Properties
     @IBOutlet weak var noteTableView: UITableView!
     
+    var realm: Realm!
     
     override func viewDidLoad() {
+        realm = try! Realm()
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -89,8 +92,42 @@ extension NoteEditViewController : NoteTitleTableViewCellDelegate {
     }
     
     func textViewDidEndEditing() {
+        add()
+
         if let cell = noteTableView.visibleCells.last as? EditableNoteTableViewCell{
             cell.noteTextView.becomeFirstResponder()
+        }
+    }
+    
+    func backgroundAdd() {
+        // Import many items in a background thread
+        DispatchQueue.global().async {
+            // Get new realm and table since we are in a new thread
+            let realm = try! Realm()
+            realm.beginWrite()
+            for _ in 0..<5 {
+                // Add row via dictionary. Order is ignored.
+//                realm.create(DemoObject.self, value: ["title": randomTitle(), "date": NSDate(), "sectionTitle": randomSectionTitle()])
+            }
+            try! realm.commitWrite()
+        }
+    }
+    
+    func add() {
+        try! realm.write {
+            let check = CheckBox()
+            check.hasCheckBox = false
+            check.isChecked = false
+            realm.create(Note.self, value: ["title": "asdasdad", "spot": "1231qweqewq", "check": check], update: true)
+            
+        }
+        
+        try! realm.write {
+            let l = try! Realm().objects(Note.self).sorted(byKeyPath: "title")
+            print(l)
+//            for o in l {
+//                realm.delete(o)
+//            }
         }
     }
 }

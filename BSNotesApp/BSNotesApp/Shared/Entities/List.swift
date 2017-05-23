@@ -7,8 +7,10 @@
 //
 
 import UIKit
-
-class List: NSObject {
-    var notes = [Note]()
+import Foundation
+import RealmSwift
+import Realm
+class List: Object {
+//    var notes: RLMArray<RLMObject>?
     
 }

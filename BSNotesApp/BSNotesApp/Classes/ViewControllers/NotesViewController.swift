@@ -35,6 +35,9 @@ class NotesViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func newNoteButtonAction(_ sender: Any) {
+        performSegue(withIdentifier: "NoteEditViewController", sender: nil)
+    }
     
     func removeSelectedStatesOfTableView() {
         if let indexPaths = notesTableView.indexPathsForSelectedRows {
